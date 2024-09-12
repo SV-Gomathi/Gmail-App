@@ -1,0 +1,25 @@
+[
+  {
+    "rules": [
+      { "field": "subject", "predicate": "contains", "value": "your Photos storage is almost full" },
+      { "field": "date_received", "predicate": "less_than", "value": "30" }
+    ],
+    "action": ["CATEGORY_PROMOTIONS", "READ"],
+    "predicate": "any"
+  },
+  {
+    "rules": [
+      { "field": "subject", "predicate": "contains", "value": "your Photos storage is almost full" },
+      { "field": "date_received", "predicate": "less_than", "value": "100" }
+    ],
+    "action": ["CATEGORY_FORUMS", "READ"],
+    "predicate": "all"
+  },
+  {
+    "rules": [
+      { "field": "from", "predicate": "contains", "value": "noreply-photos@google.com" }
+    ],
+    "action": ["CATEGORY_SOCIAL", "READ"],
+    "predicate": "all"
+  }
+]
