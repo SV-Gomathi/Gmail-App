@@ -41,7 +41,6 @@ class MySqlDBManager:
                                                     db=database,
                                                     port=port,
                                                     autocommit=False)
-                # Retrieving connection id from MySQL server
                 self.connection_id = self.conn.connection_id
                 return self.conn
 
@@ -64,8 +63,6 @@ class MySqlDBManager:
            Creating cursor from the connection.
         '''
         if self.conn:
-            # if self.cursor_type == "TUPLE_CURSOR":
-            #     return self.conn.cursor()
             return self.conn.cursor(dictionary=True)
 
     def __formatargs(self, query, arguments):
